@@ -8,20 +8,46 @@
 #
 # print('Orginal Variable:\t', li)
 
-tup = (9,1,8,2,7,3,6,4,5)
+# tup = (9,1,8,2,7,3,6,4,5)
+#
+# s_tup = sorted(tup)
+#
+# print('Tuple\t', s_tup)
+#
+# di = {'name': 'Test', 'job': 'programming', 'age': None, 'os': 'Windows'}
+#
+# s_di = sorted(di)
+#
+# print('Dict\t', s_di)
+#
+# li = [-6,-5,-4,1,2,3]
+#
+# s_li = sorted(li, key=abs)
+#
+# print (s_li)
 
-s_tup = sorted(tup)
+from operator import attrgetter
 
-print('Tuple\t', s_tup)
+class Employee():
+    def __init__(self, name,age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
 
-di = {'name': 'Test', 'job': 'programming', 'age': None, 'os': 'Windows'}
+    def __repr__(self):
+        return '({},{},${})'.format(self.name, self.age, self.salary)
 
-s_di = sorted(di)
+e1 = Employee('John', 37, 70000)
+e2 = Employee('Ellie', 29, 80000)
+e3 = Employee('Charles', 43, 90000)
 
-print('Dict\t', s_di)
+employees = [e1, e2, e3]
 
-li = [-6,-5,-4,1,2,3]
+# def e_sort(emp):
+#     return emp.name
 
-s_li = sorted(li, key=abs)
+# s_employees = sorted(employees, key=e_sort, reverse=True)
+# s_employees = sorted(employees, key=lambda e: e.name) SORTED BY LAMBDA
+s_employees = sorted(employees, key=attrgetter('age')) # SORTED BY ATTGETTER
 
-print (s_li)
+print(s_employees)
