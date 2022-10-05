@@ -1,53 +1,7 @@
-# li = [9,1,8,2,7,3,6,4,5]
-#
-# s_li = sorted(li, reverse=True) # sorting as a new list
-#
-# print('Sorted Variable:\t', s_li)
-#
-# li.sort()
-#
-# print('Orginal Variable:\t', li)
+import loops
 
-# tup = (9,1,8,2,7,3,6,4,5)
-#
-# s_tup = sorted(tup)
-#
-# print('Tuple\t', s_tup)
-#
-# di = {'name': 'Test', 'job': 'programming', 'age': None, 'os': 'Windows'}
-#
-# s_di = sorted(di)
-#
-# print('Dict\t', s_di)
-#
-# li = [-6,-5,-4,1,2,3]
-#
-# s_li = sorted(li, key=abs)
-#
-# print (s_li)
+def main():
 
-from operator import attrgetter
+    loops.numbers()
 
-class Employee():
-    def __init__(self, name,age, salary):
-        self.name = name
-        self.age = age
-        self.salary = salary
-
-    def __repr__(self):
-        return '({},{},${})'.format(self.name, self.age, self.salary)
-
-e1 = Employee('John', 37, 70000)
-e2 = Employee('Ellie', 29, 80000)
-e3 = Employee('Charles', 43, 90000)
-
-employees = [e1, e2, e3]
-
-# def e_sort(emp):
-#     return emp.name
-
-# s_employees = sorted(employees, key=e_sort, reverse=True)
-# s_employees = sorted(employees, key=lambda e: e.name) SORTED BY LAMBDA
-s_employees = sorted(employees, key=attrgetter('age')) # SORTED BY ATTGETTER
-
-print(s_employees)
+main()
