@@ -32,28 +32,6 @@ class Person():
 
 p1 = Person('Jacek', '33')
 
-# sentence = 'My name is {0.name} and I am {0.age} years old.'.format(p1)
-# print(sentence)
-#
-# sentence = 'My name is {name} and I am {age} years old.'.format(name='Jenn', age='30')
-# print(sentence)
-
-# sentence = 'My name is {name} and I am {age} years old.'.format(**person)
-# print(sentence)
-
-# for i in range(1, 11):
-#     sentence = 'The value is {:03}'.format(i)
-#     print(sentence)
-
-# pi = 3.14159265
-
-# sentence = 'Pi is equal to {:.2f}'.format(pi)
-
-# print(sentence)
-
-# sentence = '1 MB is equal to {:,.2f} bytes'.format(1000**2)
-# print(sentence)
-
 
 import datetime
 

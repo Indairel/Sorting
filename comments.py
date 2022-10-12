@@ -26,28 +26,24 @@
 #
 # print (s_li)
 
-from operator import attrgetter
+# sentence = 'My name is {0.name} and I am {0.age} years old.'.format(p1)
+# print(sentence)
+#
+# sentence = 'My name is {name} and I am {age} years old.'.format(name='Jenn', age='30')
+# print(sentence)
 
-class Employee():
-    def __init__(self, name,age, salary):
-        self.name = name
-        self.age = age
-        self.salary = salary
+# sentence = 'My name is {name} and I am {age} years old.'.format(**person)
+# print(sentence)
 
-    def __repr__(self):
-        return '({},{},${})'.format(self.name, self.age, self.salary)
+# for i in range(1, 11):
+#     sentence = 'The value is {:03}'.format(i)
+#     print(sentence)
 
-e1 = Employee('John', 37, 70000)
-e2 = Employee('Ellie', 29, 80000)
-e3 = Employee('Charles', 43, 90000)
+# pi = 3.14159265
 
-employees = [e1, e2, e3]
+# sentence = 'Pi is equal to {:.2f}'.format(pi)
 
-# def e_sort(emp):
-#     return emp.name
+# print(sentence)
 
-# s_employees = sorted(employees, key=e_sort, reverse=True)
-# s_employees = sorted(employees, key=lambda e: e.name) SORTED BY LAMBDA
-s_employees = sorted(employees, key=attrgetter('age')) # SORTED BY ATTGETTER
-
-print(s_employees)
+# sentence = '1 MB is equal to {:,.2f} bytes'.format(1000**2)
+# print(sentence)
